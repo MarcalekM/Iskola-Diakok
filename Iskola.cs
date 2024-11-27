@@ -12,15 +12,8 @@ namespace Iskola_Diakok
         public int DiakokSzama => diakok.Count;
         public double DiakokAtlagEletkora => diakok.Average(d => d.Eletkor);
 
-        public void DiakFelvitele(Diak diak)
-        {
-            diakok.Add(diak);
-        }
+        public void DiakFelvitele(Diak diak) => diakok.Add(diak);
 
-        public void DiakTorlese(string nev)
-        {
-            var diak = diakok.Where(d => d.Nev.Equals(nev)).First();
-            diakok.Remove(diak);
-        }
+        public void DiakTorlese(string nev) => diakok.Remove(diakok.Where(d => d.Nev.Equals(nev)).First());
     }
 }
